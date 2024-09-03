@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="left-login">
+        <h2 style="padding-bottom: 1rem; font-size: 2.5rem">Login</h2>
+        <form class="form" id="loginForm" action="#" method="post">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+          />
+          <div class="password-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+              title="Password must contain at least one number, one uppercase letter and one special character"
+            />
+            <span id="togglePassword" class="toggle-password">&#128065;</span>
+          </div>
+          <input
+            class="login"
+            onclick="loginButton()"
+            type="submit"
+            value="Login"
+          />
+        </form>
+        <div class="forgot-password">
+          <label class="checkbox-label">
+            <input type="checkbox" name="remember" /> Remember Me
+          </label>
+          <p>
+            <a href="#" style="text-decoration: none; color: black"
+              >Forgot Password?</a
+            >
+          </p>
+          <!-- <p>Haven't Registered yet?<a href="#">Click Here</a></p> -->
+        </div>
+      </div>
+
+      <div class="right-login">
+        <h1>Welcome to login</h1>
+        <p>Don't have an Account?</p>
+        <button>
+          <a href="Register.html" style="text-decoration: none">Register</a>
+        </button>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

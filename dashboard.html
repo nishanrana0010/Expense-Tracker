@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="side-bar">
+      <h2>Expense Tracker</h2>
+      <ul>
+        <li>
+          <a href="#dashboard"
+            ><img
+              src="icons/dashboard.png"
+              alt="Dashboard Icon"
+            /><br />Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="#add-expense"
+            ><img src="icons/expenses.png" alt="Add Expense Icon" /><br />Add
+            Expense</a
+          >
+        </li>
+        <li>
+          <a href="#view-expenses"
+            ><img
+              src="icons/view-expense.png"
+              alt="View Expenses Icon"
+            /><br />View Expenses</a
+          >
+        </li>
+        <li>
+          <a href="#manage-categories"
+            ><img
+              src="icons/tag.png"
+              alt="Categories Icon"
+            /><br />Categories</a
+          >
+        </li>
+        <li>
+          <a href="#manage-budget"
+            ><img src="icons/calculator.png" alt="Budget Icon" /><br />Budget</a
+          >
+        </li>
+        <li>
+          <a href="#reports"
+            ><img
+              src="icons/business-report.png"
+              alt="Reports Icon"
+            /><br />Reports/Analytics</a
+          >
+        </li>
+        <li>
+          <a href="#notifications"
+            ><img
+              src="icons/notification.png"
+              alt="Notifications Icon"
+            /><br />Notifications/Alerts</a
+          >
+        </li>
+        <li>
+          <a href="#settings"
+            ><img
+              src="icons/settings.png"
+              alt="Settings Icon"
+            /><br />Settings</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="main-dashboard">
+      <div class="nav-bar">
+        <div class="navbar-search">
+          <input type="text" placeholder="Search..." />
+          <img src="icons/search.png" />
+        </div>
+
+        <div class="navbar-icons">
+          <div class="notification">
+            <a href="#"><img src="icons/notification.png" /></a>
+          </div>
+          <div class="navbar-profile">
+            <a href="#"><img src="icons/user.png" alt="Profile Logo" /></a>
+            <span class="profile-name">Nishan</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="container-image">
+          <img src="icons/Admin-amico.png" alt="" />
+        </div>
+
+        <div class="container-main">
+          <h1>EXPEN$E Tracker</h1>
+          <div class="balance-header">
+            <h>Your Balance</h>
+            <p id="balance">$1000.00</p>
+          </div>
+          <div class="in-exp">
+            <div class="income">
+              <h>Income</h>
+              <p id="income-amount" class="green">$600</p>
+            </div>
+            <div class="expense">
+              <h>Expense</h>
+              <p id="expense-amount" class="red">$200</p>
+            </div>
+          </div>
+
+          <div class="add-new">
+            <div class="new-title">
+              <p id="new-title">Title</p>
+              <input type="text" class="new-title" />
+            </div>
+            <div class="new-amount">
+              <p id="new-amount">Amount (add - for expense)</p>
+              <input type="text" class="new-amount" />
+            </div>
+          </div>
+          <div id="submit">
+            <button type="submit" onclick="handleAddTransaction()">
+              Add Transaction
+            </button>
+          </div>
+        </div>
+        <div class="history">
+          <h1>History</h1>
+          <table id="history-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+              <!-- Transaction rows will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
